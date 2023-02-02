@@ -1,19 +1,17 @@
-import React from 'react';
-import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, View, ScrollView, Text, TouchableOpacity } from 'react-native';
 import theme from '../style/theme.style';
 import SearchListItem from './SearchListItem';
 export default function SearchList({filteredStocks}) {
 
-
-
     return (
         <View style={styles.container}>
             <ScrollView contentContainerStyle={styles.contentContainer}>
-                <Text style={{color: 'white'}}>Hello</Text>
-                {filteredStocks.map((stock) => {
-                    <SearchListItem stock={stock}/>
-                    // <Text style={{color: 'white'}}>{stock.name}</Text>
-                })}
+                {filteredStocks.map((stock) => 
+                    <TouchableOpacity key={stock.symbol}>
+                        <SearchListItem stock={stock}/>
+                    </TouchableOpacity>
+                )}
             </ScrollView>
         </View>
     )

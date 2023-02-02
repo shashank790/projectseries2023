@@ -18,7 +18,6 @@ export default function SearchScreen() {
             searchText: text,
             filteredStocks: stocksFiltered
         }))
-        console.log(state.filteredStocks);
     }
     return (
         <View style={styles.container}>
