@@ -1,43 +1,10 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, ScrollView, Image, Button, SafeAreaView } from 'react-native';
-import CustomButton from './components/CustomButton';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import SearchScreen from './screens/SearchScreen';
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-
-    //   <Text>I am a text!</Text>
-
-    //   <View style={styles.viewVisible}/>
-
-    //   <TextInput
-    //     style={styles.textInput}
-    //     placeholder={"TextInput"}
-    //   />
-
-    //   <View style={styles.scrollViewContainer}>
-    //     <ScrollView>
-    //       <Text>First</Text>
-    //       <Text>Second</Text>
-    //       <Text>Third</Text>
-    //       <Text>Fourth</Text>
-    //     </ScrollView>
-    //   </View>
-
-    //   <Image
-    //     style={styles.tinyLogo}
-    //     source={{
-    //       uri: 'https://reactnative.dev/img/tiny_logo.png',
-    //     }}
-    //   />
-
-    //   <Button title="Click me!"/>
-      
-    //   <CustomButton/>
-    // </View>
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={styles.container}>
       <SearchScreen/>
     </SafeAreaView>
   );
@@ -45,10 +12,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    flex: 1
   },
   viewVisible: {
     borderWidth: 1,

@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, View, ScrollView, Text, TouchableOpacity } from 'react-native';
-import theme from '../style/theme.style';
+import React from 'react';
+import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchListItem from './SearchListItem';
 export default function SearchList({filteredStocks}) {
 
@@ -20,8 +19,6 @@ export default function SearchList({filteredStocks}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        borderWidth: 1,
-        borderColor: 'red'
     },
     contentContainer: {
         flexGrow: 1
