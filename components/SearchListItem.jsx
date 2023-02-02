@@ -3,14 +3,20 @@ import {StyleSheet, View, Text} from 'react-native';
 import theme from '../style/theme.style';
 export default function SearchListItem({stock}) {
     return (
-        <View>
-
+        <View style={styles.listItemContainer}>
+            <Text style={styles.symbolText}>
+                {stock.symbol}
+            </Text>
+            <Text style={styles.nameText}>
+                {stock.name}
+            </Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     listItemContainer: {
+        height: 50,
         borderBottomWidth: 0.5,
         borderColor: theme.ACCENT_COLOR_DARK
     },

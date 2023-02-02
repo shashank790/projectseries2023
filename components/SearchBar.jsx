@@ -8,14 +8,16 @@ export default function SearchBar({searchText, handleChangeSearchText}) {
     return (
         <View style={styles.searchBarContainer}>
             <Ionicons 
+                style={styles.searchIcon}
                 name='search'
-
+                color={'#FFF'}
             />
             <TextInput
+                style={styles.searchBarText}
                 value={searchText}
                 onChangeText={(text) => handleChangeSearchText(text)}
                 placeholder='Search'
-                placeholderTextColor={'#FFF'}
+                placeholderTextColor={theme.TEXT_COLOR}
             />
         </View>
     )
@@ -23,16 +25,18 @@ export default function SearchBar({searchText, handleChangeSearchText}) {
 
 const styles=StyleSheet.create({
     searchBarContainer: {
+        marginTop: 20,
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        backgroundColor: theme.ACCENT_COLOR_LIGHT
+        backgroundColor: theme.ACCENT_COLOR_DARK,
+        padding: 12
     },
     searchIcon: {
         color: theme.TEXT_COLOR,
-        fontSize: theme.FONT_SIZE_MEDIUM
+        fontSize: theme.FONT_SIZE_LARGE
     },
     searchBarText: {
         color: theme.TEXT_COLOR,
-        fontSize: theme.FONT_SIZE_MEDIUM
+        fontSize: theme.FONT_SIZE_LARGE
     }
 });
