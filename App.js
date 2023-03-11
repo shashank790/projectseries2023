@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Camera, CameraType} from 'expo-camera';
 import * as Medialibrary from 'expo-media-library';
-import Button from './/src//components//Button';
+import Button from './src/components/Button';
 
 
 export default function App() {
@@ -25,6 +25,21 @@ export default function App() {
     })();
   },[] )
 
+  const takePicture = async () => {
+    if(cameraRef){
+      try{
+        const data = await cameraRef.current.takePicureAsync();
+        console.log(data);
+        setImage(data.uri);
+    
+      } catch(e){
+        console.log(e);
+      }
+    }
+  }
+  if(hasCameraPermission == false){
+    return <Text>No access to camera</Text>
+  }
 
   return (
     <View style={styles.container}>
@@ -37,7 +52,7 @@ export default function App() {
         <Text>hello</Text>
       </Camera>
       <View>
-        <Button title ={'Take a picture'} icon = 'camera'/>
+        <Button icon = 'camera' onPress = {takePicture}/>
       </View>
     </View>
   );
@@ -46,9 +61,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#000',
     justifyContent: 'center',
+    paddingBottom: 20
   },
   camera: {
     flex: 1,
