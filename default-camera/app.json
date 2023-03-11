@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "dummy-camera",
-    "slug": "dummy-camera",
+    "name": "default-camera",
+    "slug": "default-camera",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -52,7 +52,7 @@ export default function App() {
         <Text>hello</Text>
       </Camera>
       <View>
-        <Button icon = 'camera' onPress = {takePicture}/>
+        <Button icon = 'camera'/>
       </View>
     </View>
   );
@@ -71,4 +71,3 @@ const styles = StyleSheet.create({
 
   }
 });
-
