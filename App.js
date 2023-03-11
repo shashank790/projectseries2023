@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Camera, CameraType} from 'expo-camera';
 import * as Medialibrary from 'expo-media-library';
-import Button from './src/components/Button';
+import Button from './/src//components//Button';
 
 
 export default function App() {
